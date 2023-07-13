@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Capstone Project: Crochet</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><img src="CROTCHET (1).png" width="1350px" height="100px" title="DreamLand" alt="Crotchet Dreamland" />
+            </h1>
+        </header>
+        <article>
+            <section id="leftColumn">
+            <h1>Crochet Shop</h1>
+            <p>Here Is Where You Can Find All Of Your Crochet Needs! From Opaque To Pastel, And Even Multi-Colored Yarn! Your Needles Are Here! Choose From Inline, Tapered, Wood, Tunisian, And So Much More! Your Yarn Clips, And Sewing Kits Are All Here At <i>Crochet Dreamland</i>!</p>
+            </section>
+            <section id="rightColumn">
+                <div class = "rightFlex">
+                <img src="CrotchetVariety.png" alt="Crochet Variety" />
+                <img src="images.jfif" alt="Needle Variety" />
+                <img src="download (1).jfif" alt="Sewing Kit Variety" />
+                </div>
+            </section>
+        </article>
+            <div class="container">
+                <div class="cardContainer">
+                    <div class="front">
+                        <div class="image">
+                            <img src="chip.png" alt="">
+                            <img src="visa.png" alt="">
+                        </div>
+                        <div class="cardNumberBox">################</div>
+                        <div class="flexbox">
+                            <div class="box">
+                                <span>card holder</span>
+                                <div class="cardHolderName">full name</div>
+                            </div>
+                            <div class="box">
+                                <span>expires</span>
+                                <div class="expiration">
+                                    <span class="expMonth">mm</span>
+                                    <span class="expYear">yyyy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="stripe"></div>
+                        <div class="box">
+                            <span>cvv</span>
+                            <div class="cvvBox">
+                                <img src="visa.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Order Here Now!</h2>
+                <br>
+                <form id="order" name="order" method="get" action="orderconfirmed.html">
+                    <fieldset>
+                        <legend>Enter Your Payment Method</legend>
+                        <div class="inputBox">
+                            <span>Card Number</span>
+                            <input type="text" maxlength="12" class="cardNumber">
+                        </div>
+                        <div class="inputBox">
+                            <span>Card Holder</span>
+                            <input type="text" class="cardHolder">
+                        </div>
+                        <div class="flexbox">
+                            <div class="inputBox">
+                                <span>Expiration MM</span>
+                                <select  name="" id="" class="monthInput">
+                                    <option value="month" selected disabled>Month</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="inputBox">
+                                <span>Expiration YYYY</span>
+                                <select  name="" id="" class="yearInput">
+                                    <option value="year" selected disabled>Year</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV</span>
+                                <input type="text" maxlength="3" class="cvv">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="submit" class="submitButton">
+                </form>
+            </div>
+        <footer>
+            <nav class="verticalNavigation">
+                <h1>Contact Us</h1>
+                <ul>
+                    <li>Email: dreamland@crochet.fm</li>
+                    <li>Twitter: cr0chetdr34ml4nd</li>
+                    <li>Instagram: dreamlandcrochet</li>
+                </ul>
+            </nav> 
+            <nav class="verticalNavigation">
+                <h1>Find Us</h1>
+                <ul>
+                    <li>Number: 212-888-9461</li>
+                    <li>Address: Kirby Drive 14th Ave</li>
+                    <li>Fadima Macalou | YearUp NY|NJ | 2023</li>
+                </ul>
+            </nav>
+        </footer>
+        
+
+
+        <script>
+            document.querySelector('.cardNumber').oninput = () =>{
+                document.querySelector('.cardNumberBox').innerText = document.querySelector('.cardNumber').value;
+            }
+            document.querySelector('.cardHolder').oninput = () =>{
+                document.querySelector('.cardHolderName').innerText = document.querySelector('.cardHolder').value;
+            }
+            document.querySelector('.monthInput').oninput = () =>{
+                document.querySelector('.expMonth').innerText = document.querySelector('.monthInput').value;
+            }
+            document.querySelector('.yearInput').oninput = () =>{
+                document.querySelector('.expYear').innerText = document.querySelector('.yearInput').value;
+            }
+            document.querySelector('.cvv').onmouseenter = () =>{
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+            }
+            document.querySelector('.cvv').onmouseleave = () =>{
+                document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+                document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+            }
+            document.querySelector('.cvv').oninput = () =>{
+                document.querySelector('.cvvBox').innerText = document.querySelector('.cvv').value;
+            }
+        </script>
+
+
+    </body>
+</html>
